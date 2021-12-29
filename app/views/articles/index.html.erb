@@ -1,0 +1,8 @@
+<h1>Articles X Articles</h1>
+<p>My name is <%= @name %></p>
+<div>
+    <% @articles.each do |article| %>
+        <p><%= link_to article.title, article %></p>
+    <% end %>
+</div>
+<%= link_to "Add new article", new_article_path %>
