@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- This is a Rails practice app followed by the instruction on this page https://edgeguides.rubyonrails.org/getting_started.html
+- Commands used:
+  ```
+  rails new blog
+  rails g controller Articles index
+  rails g model Article title:string body:text
+  rails db:migrate
+  rails g model Comment commenter:string body:text article:references
+  rails db:migrate
+  rails g controller Comments
+  rails g migration add_status_to_articles status:string
+  rails g migration add_status_to_comments status:string
+  ```
