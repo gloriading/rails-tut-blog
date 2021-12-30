@@ -2,6 +2,9 @@
     <%= f.label :commenter %>
     <%= f.text_field :commenter %>
     <br />
+    <%= f.label :status %>
+    <%= f.select :status, ['public', 'private', 'archived'] %>
+    <br />
     <%= f.label :body %>
     <%= f.text_field :body %>
     <br />
