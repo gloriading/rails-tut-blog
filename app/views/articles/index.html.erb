@@ -1,11 +1,12 @@
 <h1>Articles X Articles</h1>
-<p>My name is <%= @name %></p>
-<p>I have <%= Article.public_count %> public articles </p>
-<div>
+<h3>My name is <%= @name %></h3>
+<p>I have  <mark><%= Article.public_count %></mark> public articles </p>
+<ul>
     <% @articles.each do |article| %>
         <% unless article.archived? %>
-            <p><%= link_to article.title, article %></p>
+            <li><%= link_to article.title, article %></li>
         <%end  %>
     <% end %>
-</div>
+</ul>
+
 <%= link_to "Add new article", new_article_path %>
