@@ -14,6 +14,16 @@
   rails g controller Comments
   rails g migration add_status_to_articles status:string
   rails g migration add_status_to_comments status:string
+
+  rails action_text:install
   ```
 
 - Adding Simple CSS: https://simplecss.org/demo
+
+- Scaffold commands
+
+  ```
+  rails g scaffold article title:string body:text
+  rails g resource comment article:references commenter:string body:text
+  // Need to edit routes - nest resource inside article
+  ```

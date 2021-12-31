@@ -3,7 +3,7 @@
         <%= f.label :title %>
         <br />
         <%= f.text_field :title %>
-        <br />
+        <br /><br />
         <% article.errors.full_messages_for(:title).each do |message| %>
             <p><%= message %></p>
         <% end %>
@@ -12,7 +12,7 @@
         <%= f.label :status %>
         <br />
         <%= f.select :status, ['public', 'private', 'archived'] %>
-        <br />
+        <br /><br />
         <% article.errors.full_messages_for(:status).each do |message| %>
             <p><%= message %></p>
         <% end %>
@@ -20,7 +20,7 @@
     <div>
         <%= f.label :body %>
         <br />
-        <%= f.text_area :body %>
+        <%= f.rich_text_area :body %>
         <% article.errors.full_messages_for(:body).each do |message| %>
             <p><%= message %></p>
         <% end %>
@@ -30,4 +30,6 @@
     </div>
 <% end  %>
 
-<%= link_to "Home", root_path %>
+<nav>
+    <%= link_to "Home", root_path %>
+</nav>

@@ -1,6 +1,10 @@
 <% unless comment.archived?  %>
-    <p><b><%= comment.commenter %></b>: <%= comment.body %><p>
-    <small><%= time_ago_in_words comment.created_at %> ago</small>
-    <p><%= link_to "Delete comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure to delete this comment" } %>
-</p>
+    <div>
+        <p>Commenter: <%= comment.commenter %></p>
+        <p>Comment: <%= comment.body %></p>
+        <small>- Commented <%= time_ago_in_words comment.created_at %> ago -</small>
+    </div>
+    <nav>
+        <%= link_to "Delete comment", [comment.article, comment], method: :delete, data: { confirm: "Are you sure to delete this comment" } %>
+    </nav>
  <% end  %>
